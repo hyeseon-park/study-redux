@@ -1,10 +1,10 @@
 import "./App.css";
-import Sky from "./components/Sky";
+import Plus from "./components/Plus";
 
 function App() {
   return (
     <div className="App">
-      <Sky />
+      <Plus />
     </div>
   );
 }
