@@ -1,10 +1,10 @@
 import "./App.css";
-import Plus from "./components/Plus";
+import Rocket from "./components/Rocket";
 
 function App() {
   return (
     <div className="App">
-      <Plus />
+      <Rocket />
     </div>
   );
 }
