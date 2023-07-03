@@ -1,10 +1,10 @@
 import "./App.css";
-import Rocket from "./components/Rocket";
+import Posts from "./components/Posts";
 
 function App() {
   return (
     <div className="App">
-      <Rocket />
+      <Posts />
     </div>
   );
 }
