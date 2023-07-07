@@ -49,7 +49,6 @@ const GlobalStyles = createGlobalStyle`
     min-width: 320px;
     height: 100vh; // 수정
     margin: 0 auto;
-    padding: 0 16px;
     border: 1px solid black; // 추가
   }
 
