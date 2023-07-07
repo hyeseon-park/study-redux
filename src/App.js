@@ -1,11 +1,15 @@
 import "./App.css";
 import Slide from "./components/Slide";
+import GlobalStyles from "./shared/global/globalStyles";
 
 function App() {
   return (
-    <div className="App">
-      <Slide />
-    </div>
+    <>
+      <GlobalStyles />
+      <div className="App">
+        <Slide />
+      </div>
+    </>
   );
 }
 
