@@ -1,5 +1,5 @@
 import "./App.css";
-import Slide from "./components/Slide";
+import Address from "./components/Address";
 import GlobalStyles from "./shared/global/globalStyles";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <GlobalStyles />
       <div className="App">
-        <Slide />
+        <Address />
       </div>
     </>
   );

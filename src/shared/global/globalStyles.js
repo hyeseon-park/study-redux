@@ -47,7 +47,7 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     max-width: 720px;
     min-width: 320px;
-    height: 100vh; // 수정
+    
     margin: 0 auto;
     border: 1px solid black; // 추가
   }
