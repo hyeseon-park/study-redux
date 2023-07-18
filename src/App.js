@@ -1,5 +1,5 @@
 import "./App.css";
-import Address from "./components/Address";
+import Attachment from "./components/Attachment";
 import GlobalStyles from "./shared/global/globalStyles";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <GlobalStyles />
       <div className="App">
-        <Address />
+        <Attachment />
       </div>
     </>
   );
