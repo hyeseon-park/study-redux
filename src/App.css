@@ -5,3 +5,13 @@
 li {
   text-align: left;
 }
+
+header {
+  background-color: aliceblue;
+  height: 40px;
+}
+
+footer {
+  background-color: lightgoldenrodyellow;
+  height: 40px;
+}
