@@ -41,7 +41,7 @@ function App() {
       {/* <QueryClientProvider client={queryClient}> */}
       <CommentContextProvider>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/">
             <Route index element={<MainPage />} />
             <Route path="address" element={<AddressPage />} />
             <Route path="slide" element={<SlidePage />} />
