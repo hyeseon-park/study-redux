@@ -38,28 +38,28 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <QueryClientProvider client={queryClient}>
-        <CommentContextProvider>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<MainPage />} />
-              <Route path="address" element={<AddressPage />} />
-              <Route path="slide" element={<SlidePage />} />
-              <Route path="posts" element={<PostPage />} />
-              <Route path="posts2" element={<Posts2 />} />
+      {/* <QueryClientProvider client={queryClient}> */}
+      <CommentContextProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<MainPage />} />
+            <Route path="address" element={<AddressPage />} />
+            <Route path="slide" element={<SlidePage />} />
+            <Route path="posts" element={<PostPage />} />
+            <Route path="posts2" element={<Posts2 />} />
 
-              <Route path="posts3" element={<Post3Page />} />
+            <Route path="posts3" element={<Post3Page />} />
 
-              <Route path="counter" element={<CounterPage />} />
-              <Route path="test" element={<Test />} />
-              <Route path="number">
-                <Route path=":numberId" element={<NumberPage />} />
-              </Route>
+            <Route path="counter" element={<CounterPage />} />
+            <Route path="test" element={<Test />} />
+            <Route path="number">
+              <Route path=":numberId" element={<NumberPage />} />
             </Route>
-          </Routes>
-        </CommentContextProvider>
-        <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
+          </Route>
+        </Routes>
+      </CommentContextProvider>
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+      {/* </QueryClientProvider> */}
     </>
   );
 }
