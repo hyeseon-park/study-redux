@@ -10,7 +10,7 @@ import { RecoilRoot } from "recoil";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-worker.start();
+// worker.start();
 
 root.render(
   <RecoilRoot>
