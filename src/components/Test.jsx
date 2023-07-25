@@ -1,23 +1,22 @@
 import React, { useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
 const Test = () => {
-  const getRandom = async () => {
-    let params = { page: 2 };
-    try {
-      const res = await fetch(
-        "api/randomd?" + new URLSearchParams(params)
-      ).then((res) => res.json());
-      console.log(res.data);
-    } catch (error) {
-      console.log("!" + error);
-    }
-  };
+  const [searchParams, setSearchParams] = useSearchParams();
+  const typeParam = searchParams.get("type");
 
   useEffect(() => {
-    getRandom();
+    if (searchParams.get("genre") !== "hybrid") {
+      const newSearchParams = new URLSearchParams({ type: "nuclear" });
+      setSearchParams(newSearchParams);
+    }
   }, []);
 
-  return <div>Test</div>;
+  return (
+    <div>
+      <p>{typeParam}</p>
+    </div>
+  );
 };
 
 export default Test;
