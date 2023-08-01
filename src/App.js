@@ -1,4 +1,11 @@
-import { Routes, Route, Outlet, Link, useNavigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Outlet,
+  Link,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import "./App.css";
 import GlobalStyles from "./shared/global/globalStyles";
 import MainPage from "./pages/MainPage";
@@ -14,6 +21,7 @@ import Posts2 from "./components/Posts2";
 import Posts3 from "./components/Posts3";
 import Test from "./components/Test";
 import CommentContextProvider from "./store/CommentContext";
+import { useEffect } from "react";
 
 const Layout = () => {
   const navigate = useNavigate();
@@ -32,7 +40,20 @@ const Layout = () => {
   );
 };
 
-const queryClient = new QueryClient();
+const TypeParamRoutes = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    if (searchParams.get("genre") !== "hybrid") {
+      const newSearchParams = new URLSearchParams({ type: "nuclear" });
+      setSearchParams(newSearchParams);
+    }
+  }, []);
+
+  return <Outlet />;
+};
+
+// const queryClient = new QueryClient();
 
 function App() {
   return (
@@ -51,7 +72,10 @@ function App() {
             <Route path="posts3" element={<Post3Page />} />
 
             <Route path="counter" element={<CounterPage />} />
-            <Route path="test" element={<Test />} />
+
+            <Route element={<TypeParamRoutes />}>
+              <Route path="test" element={<Test />} />
+            </Route>
             <Route path="number">
               <Route path=":numberId" element={<NumberPage />} />
             </Route>
