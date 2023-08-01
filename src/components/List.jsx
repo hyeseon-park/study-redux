@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const List = React.memo(({ wordList }) => {
+const List = React.memo(({ wordList, onSomething }) => {
   console.log("List 컴포넌트 렌더링");
+
+  useEffect(() => {
+    onSomething();
+  });
 
   return (
     <>
